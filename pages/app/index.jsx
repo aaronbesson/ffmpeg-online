@@ -195,33 +195,7 @@ const App = () => {
         </p>
         <p className="ant-upload-text">Click or drag file</p>
       </Dragger>
-      <h4>2. Set ffmpeg options</h4>
-      <div className="exec">
-        ffmpeg
-        <Input
-          value={inputOptions}
-          placeholder="please enter input options"
-          onChange={(event) => setInputOptions(event.target.value)}
-        />
-        <Input
-          value={name}
-          placeholder="please enter input filename"
-          onChange={(event) => setName(event.target.value)}
-        />
-        <Input
-          value={outputOptions}
-          placeholder="please enter output options"
-          onChange={(event) => setOutputOptions(event.target.value)}
-        />
-        <Input
-          value={output}
-          placeholder="Please enter the download file name"
-          onChange={(event) => setOutput(event.target.value)}
-        />
-        <div className="command-text">
-          ffmpeg {inputOptions} {name} {outputOptions} {output}
-        </div>
-      </div>
+     
       <h4>3. Run and get the output file</h4>
       <Button type="primary" disabled={!Boolean(file)} onClick={handleExec}>
         run
